@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <body>
+
+        <ui:composition template="./../WEB-INF/DesignTemplate/PrincipalTemplate.xhtml">
+
+
+            <ui:define name="PerfilUserResHomy">
+                <!--Content-->
+            </ui:define>
+
+            <ui:define name="Slider">
+
+                <br/><br/><br/>
+                <h:form id="SliderPresentation">
+                    <div id="containerSliderPresentation" class="center-block">
+                        <div id="ElementsSliderPresentation" class="center-block">  
+                            <div id="wowslider-container1">
+                                <div class="ws_images">
+                                    <ul>
+                                        <li><p:graphicImage name="./Images/Slider/Images/1.png" alt="BIENVENIDOS A RESHOMY" title="BIENVENIDOS A RESHOMY" id="wows1_0"/></li>
+                                        <li><p:graphicImage name="./Images/Slider/Images/2.png" alt="UN SISTEMA DE INFORMACIÓN" title="UN SISTEMA DE INFORMACIÓN" id="wows1_1"/></li>
+                                        <li><p:graphicImage name="./Images/Slider/Images/3.png" alt="CONTROL DE PEDIDOS" title="CONTROL DE PEDIDOS" id="wows1_2"/></li>
+                                        <li><p:graphicImage name="./Images/Slider/Images/4.png" alt="CONTROL DE RESPORTES TOTALES" title="CONTROL DE RESPORTES TOTALES" id="wows1_3"/></li>
+                                        <li><p:graphicImage name="./Images/Slider/Images/5.png" alt="EN EL NEGOCIO DE LA BELLEZA" title="EN EL NEGOCIO DE LA BELLEZA" id="wows1_4"/></li>
+                                        <li><p:graphicImage name="./Images/Slider/Images/6.png" alt="CON UNA INFORMACIÓN SEGURA Y CONFIABLE." title="CON UNA INFORMACIÓN SEGURA Y CONFIABLE." id="wows1_5"/></li>
+                                    </ul>
+                                </div>                 
+                                <div class="ws_bullets">
+                                    <div>
+                                        <p:link title="BIENVENIDOS A RESHOMY"><span><p:graphicImage name="./Images/Slider/Tooltips/1.png" alt="BIENVENIDOS A RESHOMY"/>1</span></p:link>
+                                        <p:link title="UN SISTEMA DE INFORMACIÓN"><span><p:graphicImage name="./Images/Slider/Tooltips/2.png" alt="UN SISTEMA DE INFORMACIÓN"/>2</span></p:link>
+                                        <p:link title="CONTROL DE PEDIDOS"><span><p:graphicImage name="./Images/Slider/Tooltips/3.png" alt="CONTROL DE PEDIDOS"/>3</span></p:link>
+                                        <p:link title="CONTROL DE RESPORTES TOTALES"><span><p:graphicImage name="./Images/Slider/Tooltips/4.png" alt="CONTROL DE RESPORTES TOTALES"/>4</span></p:link>
+                                        <p:link title="EN EL NEGOCIO DE LA BELLEZA"><span><p:graphicImage name="./Images/Slider/Tooltips/5.png" alt="EN EL NEGOCIO DE LA BELLEZA"/>5</span></p:link>
+                                        <p:link title="CON UNA INFORMACIÓN SEGURA Y CONFIABLE."><span><p:graphicImage name="./Images/Slider/Tooltips/6.png" alt="CON UNA INFORMACIÓN SEGURA Y CONFIABLE."/>6</span></p:link>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>    
+                    </div>
+
+                </h:form>
+
+                <script src="#{resource['/Js/Efects_Slider/Efects_Slider.js']}"></script>
+                <script src="#{resource['/Js/Efects_Slider/Efects.js']}"></script> 
+
+            </ui:define>
+
+            <ui:define name="Access">
+
+
+                <h:form id="ContentAccessResHomy">
+
+                    <!--Content-->
+                    <div class="col-sm-4 col-md-4 col-lg-4" id="SetSizeLimit">
+                        <div class="AccessLoginClientResHomy">
+                            <p:graphicImage name="./Images/Icons/1.png" class="img-responsive"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4" id="SetSizeLimit">
+                        <div class="AccessRegisterClientResHomy">
+                            <p:graphicImage name="./Images/Icons/3.png" class="img-responsive"/>
+                        </div>
+                    </div>                    
+                    <div class="col-sm-4 col-md-4 col-lg-4" id="SetSizeLimit">
+                        <div class="AccessLoginCollaboratorResHomy">
+                            <p:graphicImage name="./Images/Icons/2.png" class="img-responsive"/>
+                        </div>
+                    </div>
+
+                </h:form>
+
+
+                <h:form id="loginClientAccess">
+
+                    <!--Modal Login Client-->
+
+                    <div class="modal fade ModalLoginClient" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Iniciar Sesión Cliente</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <p:panel>
+                                        <h:outputLabel for="usernameClient" value="Nombre de Usuario:" class="titleUsuarioClient"/>
+                                        <br/>
+                                        <p:inputText id="usernameClient" value="#{principalControllerClient.cliente}" required="true" class="txtUsuarioClient" label="Nombre de Usuario" placeholder="Nombre de Usuario"/>
+                                        <br/><br/>
+                                        <h:outputLabel for="passwordClient" value="Contraseña:" class="titleUsuarioClient"/>
+                                        <br/>
+                                        <p:password id="passwordClient" value="#{principalControllerClient.clave}" required="true" class="txtUsuarioClient" label="Contraseña" placeholder="Contraseña"/>
+                                    </p:panel>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="col-sm-4 col-md-4 col-lg-4">
+                                        <p:commandButton class="buttonAccessResHomy" action="#{principalControllerClient.validarUser()}" value="Iniciar Sesión" ajax="false"/>
+                                    </div>
+                                    <div class="col-sm-4 col-md-4 col-lg-4">
+                                        <p:commandButton class="buttonCancelAccess" value="Cancelar"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </h:form>
+
+                <!--Content-->
+                <h:form id="loginCollaboratorAccess">
+
+                    <!--Modal Login Collaborator-->
+
+                    <div class="modal fade ModalLoginCollaborator" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Iniciar Sesión Colaborador</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <p:panel>
+                                        <h:outputLabel for="usernameCollaborator" value="Nombre de Usuario:" class="titleUsuarioCollaborator"/>
+                                        <br/>
+                                        <p:inputText id="usernameCollaborator" value="#{principalControllerCollaborator.colaborador}" required="true" class="txtUsuarioCollaborator" label="Nombre de Usuario" placeholder="Nombre de Usuario"/>
+                                        <br/><br/>
+                                        <h:outputLabel for="passwordCollaborator" value="Contraseña:"/>
+                                        <br/>
+                                        <p:password id="passwordCollaborator" value="#{principalControllerCollaborator.clave}" required="true" class="txtUsuarioCollaborator" label="Contraseña" placeholder="Contraseña"/>
+                                    </p:panel>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="col-sm-4 col-md-4 col-lg-4">
+                                        <p:commandButton class="buttonAccessResHomy" value="Iniciar Sesión" action="#{principalControllerCollaborator.validarUser()}" ajax="false"/>
+                                    </div>
+                                    <div class="col-sm-4 col-md-4 col-lg-4">
+                                        <p:commandButton class="buttonCancelAccess" value="Cancelar"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </h:form>
+
+                <h:form id="RegisterClientAccess">
+
+                    <!--Modal Register-->
+
+                    <div class="portfolio-modal modal fade" id="ModalRegisterClient" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-content">
+                            <div class="close-modal" data-dismiss="modal"> <!--Close Modal-->
+                                <div class="lr">
+                                    <div class="rl">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-8 col-lg-offset-2">
+                                        <div class="modal-body">
+                                            <!--Content-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                               
+
+                </h:form>
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

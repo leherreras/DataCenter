@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="ReporteEditDlg" widgetVar="ReporteEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditReporteTitle}">
+            <h:form id="ReporteEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{reporteController.selected != null}">
+                        <p:outputLabel value="#{bundle.EditReporteLabel_idReporte}" for="idReporte" />
+                        <p:inputText id="idReporte" value="#{reporteController.selected.idReporte}" title="#{bundle.EditReporteTitle_idReporte}" required="true" requiredMessage="#{bundle.EditReporteRequiredMessage_idReporte}"/>
+                        <p:outputLabel value="#{bundle.EditReporteLabel_nombreReporte}" for="nombreReporte" />
+                        <p:inputText id="nombreReporte" value="#{reporteController.selected.nombreReporte}" title="#{bundle.EditReporteTitle_nombreReporte}" required="true" requiredMessage="#{bundle.EditReporteRequiredMessage_nombreReporte}"/>
+                        <p:outputLabel value="#{bundle.EditReporteLabel_fechaReporte}" for="fechaReporte" />
+                        <p:calendar id="fechaReporte" pattern="MM/dd/yyyy HH:mm:ss" value="#{reporteController.selected.fechaReporte}" title="#{bundle.EditReporteTitle_fechaReporte}" required="true" requiredMessage="#{bundle.EditReporteRequiredMessage_fechaReporte}" showOn="button"/>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{reporteController.update}" value="#{bundle.Save}" update="display,:ReporteListForm:datalist,:growl" oncomplete="handleSubmit(args, 'ReporteEditDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="ReporteEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

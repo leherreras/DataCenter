@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="DetallePedidoCreateDlg" widgetVar="DetallePedidoCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateDetallePedidoTitle}">
+            <h:form id="DetallePedidoCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{detallePedidoController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateDetallePedidoLabel_idDetallePedido}" for="idDetallePedido" />
+                        <p:inputText id="idDetallePedido" value="#{detallePedidoController.selected.idDetallePedido}" title="#{bundle.CreateDetallePedidoTitle_idDetallePedido}" required="true" requiredMessage="#{bundle.CreateDetallePedidoRequiredMessage_idDetallePedido}"/>
+                        <p:outputLabel value="#{bundle.CreateDetallePedidoLabel_cantidadPedido}" for="cantidadPedido" />
+                        <p:inputText id="cantidadPedido" value="#{detallePedidoController.selected.cantidadPedido}" title="#{bundle.CreateDetallePedidoTitle_cantidadPedido}" required="true" requiredMessage="#{bundle.CreateDetallePedidoRequiredMessage_cantidadPedido}"/>
+                        <p:outputLabel value="#{bundle.CreateDetallePedidoLabel_estadoPagoCliente}" for="estadoPagoCliente" />
+                        <p:selectBooleanCheckbox id="estadoPagoCliente" value="#{detallePedidoController.selected.estadoPagoCliente}" required="true" requiredMessage="#{bundle.EditDetallePedidoRequiredMessage_estadoPagoCliente}"/>
+                        <p:outputLabel value="#{bundle.CreateDetallePedidoLabel_estadoPagoColaborador}" for="estadoPagoColaborador" />
+                        <p:selectBooleanCheckbox id="estadoPagoColaborador" value="#{detallePedidoController.selected.estadoPagoColaborador}" required="true" requiredMessage="#{bundle.EditDetallePedidoRequiredMessage_estadoPagoColaborador}"/>
+                        <p:outputLabel value="#{bundle.CreateDetallePedidoLabel_pedido}" for="pedido" />
+                        <p:selectOneMenu id="pedido" value="#{detallePedidoController.selected.pedido}" required="true" requiredMessage="#{bundle.EditDetallePedidoRequiredMessage_pedido}">
+                            <f:selectItems value="#{pedidoController.itemsAvailableSelectOne}"
+                                           var="pedidoItem"
+                                           itemValue="#{pedidoItem}"/>
+                        </p:selectOneMenu>
+                        <p:outputLabel value="#{bundle.CreateDetallePedidoLabel_servicio}" for="servicio" />
+                        <p:selectOneMenu id="servicio" value="#{detallePedidoController.selected.servicio}" >
+                            <f:selectItems value="#{servicioController.itemsAvailableSelectOne}"
+                                           var="servicioItem"
+                                           itemValue="#{servicioItem}"/>
+                        </p:selectOneMenu>
+                        <p:outputLabel value="#{bundle.CreateDetallePedidoLabel_inventario}" for="inventario" />
+                        <p:selectOneMenu id="inventario" value="#{detallePedidoController.selected.inventario}" >
+                            <f:selectItems value="#{inventarioController.itemsAvailableSelectOne}"
+                                           var="inventarioItem"
+                                           itemValue="#{inventarioItem}"/>
+                        </p:selectOneMenu>
+                        <p:outputLabel value="#{bundle.CreateDetallePedidoLabel_tipoSalida}" for="tipoSalida" />
+                        <p:selectOneMenu id="tipoSalida" value="#{detallePedidoController.selected.tipoSalida}" required="true" requiredMessage="#{bundle.EditDetallePedidoRequiredMessage_tipoSalida}">
+                            <f:selectItems value="#{tipoSalidaController.itemsAvailableSelectOne}"
+                                           var="tipoSalidaItem"
+                                           itemValue="#{tipoSalidaItem}"/>
+                        </p:selectOneMenu>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{detallePedidoController.create}" value="#{bundle.Save}" update="display,:DetallePedidoListForm:datalist,:growl" oncomplete="handleSubmit(args,'DetallePedidoCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="DetallePedidoCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

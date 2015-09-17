@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="Content_View/cliente/Create.xhtml" x="1150" y="300" zoom="true"/>
+        <Node id="Content_View/pedido/Create.xhtml" x="400" y="900" zoom="true"/>
+        <Node id="Content_View/servicio/Edit.xhtml" x="650" y="750" zoom="true"/>
+        <Node id="Content_View/General/ResHomy_Catalog.xhtml" x="1150" y="150" zoom="true"/>
+        <Node id="Content_View/pedido/List.xhtml" x="650" y="900" zoom="true"/>
+        <Node id="Content_View/colaborador/View.xhtml" x="150" y="1350" zoom="true"/>
+        <Node id="Content_View/colaborador/Edit.xhtml" x="150" y="900" zoom="true"/>
+        <Node id="Content_View/reporte/Edit.xhtml" x="1150" y="600" zoom="true"/>
+        <Node id="Content_View/producto/List.xhtml" x="1400" y="150" zoom="true"/>
+        <Node id="Content_View/servicio/List.xhtml" x="1400" y="750" zoom="true"/>
+        <Node id="Content_View/servicio/View.xhtml" x="1150" y="750" zoom="true"/>
+        <Node id="Content_View/detallePedidoproveedor/List.xhtml" x="1650" y="150" zoom="true"/>
+        <Node id="Content_View/tipoProducto/List.xhtml" x="400" y="1350" zoom="true"/>
+        <Node id="index.xhtml" x="36" y="292" zoom="true"/>
+        <Node id="Content_View/detallePedido/List.xhtml" x="1900" y="450" zoom="true"/>
+        <Node id="Content_View/cliente/List.xhtml" x="1650" y="300" zoom="true"/>
+        <Node id="Content_View/inventario/View.xhtml" x="1650" y="450" zoom="true"/>
+        <Node id="Content_View/General/ResHomy_Access.xhtml" x="242" y="380" zoom="true"/>
+        <Node id="Content_View/tipoProducto/Create.xhtml" x="900" y="450" zoom="true"/>
+        <Node id="Content_View/tipoSalida/View.xhtml" x="76" y="532" zoom="true"/>
+        <Node id="Content_View/inventario/List.xhtml" x="2650" y="150" zoom="true"/>
+        <Node id="Content_View/tipoSalida/List.xhtml" x="400" y="1200" zoom="true"/>
+        <Node id="Content_View/producto/View.xhtml" x="150" y="1500" zoom="true"/>
+        <Node id="Content_View/reporte/Create.xhtml" x="400" y="600" zoom="true"/>
+        <Node id="Content_View/cliente/View.xhtml" x="372" y="545" zoom="true"/>
+        <Node id="Content_View/inventario/Create.xhtml" x="400" y="750" zoom="true"/>
+        <Node id="Content_View/producto/Create.xhtml" x="1400" y="600" zoom="true"/>
+        <Node id="Content_View/tipoProducto/View.xhtml" x="2150" y="150" zoom="true"/>
+        <Node id="Content_View/proveedor/Edit.xhtml" x="650" y="1050" zoom="true"/>
+        <Node id="Content_View/Main_Menu.xhtml" x="182" y="159" zoom="true"/>
+        <Node id="Content_View/pedido/View.xhtml" x="650" y="1200" zoom="true"/>
+        <Node id="Content_View/detallePedido/View.xhtml" x="893" y="391" zoom="true"/>
+        <Node id="Content_View/rol/Edit.xhtml" x="900" y="750" zoom="true"/>
+        <Node id="Content_View/detallePedido/Create.xhtml" x="150" y="1050" zoom="true"/>
+        <Node id="Content_View/detallePedidoproveedor/Edit.xhtml" x="150" y="750" zoom="true"/>
+        <Node id="template.xhtml" x="1400" y="300" zoom="true"/>
+        <Node id="Content_View/proveedor/Create.xhtml" x="150" y="1200" zoom="true"/>
+        <Node id="Content_View/detallePedidoproveedor/View.xhtml" x="178" y="475" zoom="true"/>
+        <Node id="Content_View/detallePedidoproveedor/Create.xhtml" x="150" y="600" zoom="true"/>
+        <Node id="Content_View/inventario/Edit.xhtml" x="1900" y="150" zoom="true"/>
+        <Node id="Content_View/producto/Edit.xhtml" x="1150" y="450" zoom="true"/>
+        <Node id="Content_View/reporte/List.xhtml" x="900" y="600" zoom="true"/>
+        <Node id="Content_View/reporte/View.xhtml" x="2400" y="300" zoom="true"/>
+        <Node id="Content_View/tipoProducto/Edit.xhtml" x="650" y="600" zoom="true"/>
+        <Node id="Content_View/rol/Create.xhtml" x="650" y="450" zoom="true"/>
+        <Node id="Content_View/tipoSalida/Create.xhtml" x="402" y="98" zoom="true"/>
+        <Node id="Content_View/colaborador/Create.xhtml" x="2400" y="150" zoom="true"/>
+        <Node id="Content_View/rol/List.xhtml" x="916" y="180" zoom="true"/>
+        <Node id="Content_View/cliente/Edit.xhtml" x="1650" y="600" zoom="true"/>
+        <Node id="Content_View/colaborador/List.xhtml" x="1150" y="900" zoom="true"/>
+        <Node id="Content_View/proveedor/List.xhtml" x="59" y="92" zoom="true"/>
+        <Node id="Content_View/pedido/Edit.xhtml" x="1400" y="450" zoom="true"/>
+        <Node id="Content_View/rol/View.xhtml" x="2150" y="300" zoom="true"/>
+        <Node id="Content_View/proveedor/View.xhtml" x="900" y="900" zoom="true"/>
+        <Node id="Content_View/tipoSalida/Edit.xhtml" x="1900" y="300" zoom="true"/>
+        <Node id="Content_View/servicio/Create.xhtml" x="900" y="1050" zoom="true"/>
+        <Node id="Content_View/detallePedido/Edit.xhtml" x="787" y="98" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

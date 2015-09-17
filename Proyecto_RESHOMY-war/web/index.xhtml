@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <body>
+
+        <ui:composition template="./WEB-INF/DesignTemplate/HomeTemplate.xhtml">
+
+            <ui:define name="Content">                
+                <div id="Advertencia" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="ModalContent modal-content">
+                            <div class=" ModalHeader modal-header">
+                                <h3 class="ModalTitle modal-title">Click Derecho</h3>
+                            </div>
+                            <div class="modal-body">
+                                <h3 class="Deshabilitado" >Deshabilitado.</h3>
+                                <button class="CloseModal center-block" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+
+                <div class="modal fade" id="Bienvenido">
+                    <div class="modal-dialog">
+                        <div class="ContentHeader modal-content">
+                            <div class="Header modal-header">
+                                <h2 class="HeaderTitle modal-title">Bienvenidos a ResHomy</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+
+</html>

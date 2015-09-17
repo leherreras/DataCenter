@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="DetallePedidoproveedorViewDlg" widgetVar="DetallePedidoproveedorViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewDetallePedidoproveedorTitle}">
+            <h:form id="DetallePedidoproveedorViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{detallePedidoproveedorController.selected != null}">
+                        <h:outputText value="#{bundle.ViewDetallePedidoproveedorLabel_idDetallePedidoProveedor}"/>
+                        <h:outputText value="#{detallePedidoproveedorController.selected.idDetallePedidoProveedor}" title="#{bundle.ViewDetallePedidoproveedorTitle_idDetallePedidoProveedor}"/>
+                        <h:outputText value="#{bundle.ViewDetallePedidoproveedorLabel_precioProductoUnidad}"/>
+                        <h:outputText value="#{detallePedidoproveedorController.selected.precioProductoUnidad}" title="#{bundle.ViewDetallePedidoproveedorTitle_precioProductoUnidad}"/>
+                        <h:outputText value="#{bundle.ViewDetallePedidoproveedorLabel_cantidad}"/>
+                        <h:outputText value="#{detallePedidoproveedorController.selected.cantidad}" title="#{bundle.ViewDetallePedidoproveedorTitle_cantidad}"/>
+                        <h:outputText value="#{bundle.ViewDetallePedidoproveedorLabel_descuento}"/>
+                        <h:outputText value="#{detallePedidoproveedorController.selected.descuento}" title="#{bundle.ViewDetallePedidoproveedorTitle_descuento}"/>
+                        <h:outputText value="#{bundle.ViewDetallePedidoproveedorLabel_entregado}"/>
+                        <p:selectBooleanCheckbox value="#{detallePedidoproveedorController.selected.entregado}" disabled="true"/>
+                        <h:outputText value="#{bundle.ViewDetallePedidoproveedorLabel_fechaPedidoProveedor}"/>
+                        <h:outputText value="#{detallePedidoproveedorController.selected.fechaPedidoProveedor}" title="#{bundle.ViewDetallePedidoproveedorTitle_fechaPedidoProveedor}">
+                            <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewDetallePedidoproveedorLabel_fechaEntregaProveedor}"/>
+                        <h:outputText value="#{detallePedidoproveedorController.selected.fechaEntregaProveedor}" title="#{bundle.ViewDetallePedidoproveedorTitle_fechaEntregaProveedor}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewDetallePedidoproveedorLabel_proveedor}"/>
+                        <h:outputText value="#{detallePedidoproveedorController.selected.proveedor}" title="#{bundle.ViewDetallePedidoproveedorTitle_proveedor}"/>
+                        <h:outputText value="#{bundle.ViewDetallePedidoproveedorLabel_producto}"/>
+                        <h:outputText value="#{detallePedidoproveedorController.selected.producto}" title="#{bundle.ViewDetallePedidoproveedorTitle_producto}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="DetallePedidoproveedorViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

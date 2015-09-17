@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        
+        <link rel="shortcut icon" type="image/x-ico" href="#{resource['/Favicon.ico']}"/>
+        <title>RESHOMY</title>
+
+        <h:outputStylesheet name="./Frameworks/Bootstrap/Css/bootstrap.min.css"/>
+        <h:outputStylesheet name="./Css/Style_Parallax/Inicio.css"/>
+        
+        <script src="#{resource['/Frameworks/Jquery/jquery-2.1.3.min.js']}"></script>
+        <h:outputScript name="./Frameworks/Bootstrap/Js/bootstrap.min.js"/>
+        <h:outputScript name="./Frameworks/Parallax/parallax.min.js"/>
+        <h:outputScript name="./Js/Efects_Parallax/Settings_Web.js"/>
+        <h:outputScript name="./Js/Efects_Parallax/Efects_Parallax.js"/>
+        <script src="#{resource['/Frameworks/Compatibilidad/html5shiv.js']}"></script>
+        <script src="#{resource['/Frameworks/Compatibilidad/prefixfree.min.js']}"></script> <!--Prefijos Css3 Automáticos-->
+    </h:head>
+
+    
+    <h:body>
+
+        <div id="container" class="Parallax col-lg-12">
+            <ul id="scene">
+                <li class="layer" data-depth="4.20"><h:graphicImage id="ResHomy2" class="img-responsive" name="./Images/Images_Parallax/Capa 1.png"/></li>
+                <li class="layer" data-depth="6.99"><h:graphicImage id="ResHomy" name="./Images/Images_Parallax/Grupo 1.png"/></li>
+            </ul>
+        </div>
+  
+        <script>            
+            //Parallax Principal:
+            var Presentacion = document.getElementById("scene");
+            var Parallax = new Parallax(scene);        
+        </script>   
+        <p:link outcome="/Content_View/Main_Menu.xhtml">        
+            <h:graphicImage class="center-block" id="Entrar" name="./Images/Images_Parallax/Entrar.png"/>      
+            <h:graphicImage class="center-block" id="Entrar1" name="./Images/Images_Parallax/Entrar1.png"/>      
+        </p:link>
+        
+        <div class="center-block" id="Titulos">        
+            <h3 id="Titulo">Ingresar a ResHomy.</h3>           
+        </div>  
+        
+        <ui:insert name="Content"/>
+
+    </h:body>
+
+        
+</html>

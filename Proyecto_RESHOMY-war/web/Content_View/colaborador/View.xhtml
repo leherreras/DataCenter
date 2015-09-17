@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="ColaboradorViewDlg" widgetVar="ColaboradorViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewColaboradorTitle}">
+            <h:form id="ColaboradorViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{colaboradorController.selected != null}">
+                        <h:outputText value="#{bundle.ViewColaboradorLabel_idColaborador}"/>
+                        <h:outputText value="#{colaboradorController.selected.idColaborador}" title="#{bundle.ViewColaboradorTitle_idColaborador}"/>
+                        <h:outputText value="#{bundle.ViewColaboradorLabel_nombreUsuario}"/>
+                        <h:outputText value="#{colaboradorController.selected.nombreUsuario}" title="#{bundle.ViewColaboradorTitle_nombreUsuario}"/>
+                        <h:outputText value="#{bundle.ViewColaboradorLabel_contrasena}"/>
+                        <h:outputText value="#{colaboradorController.selected.contrasena}" title="#{bundle.ViewColaboradorTitle_contrasena}"/>
+                        <h:outputText value="#{bundle.ViewColaboradorLabel_nombresColaborador}"/>
+                        <h:outputText value="#{colaboradorController.selected.nombresColaborador}" title="#{bundle.ViewColaboradorTitle_nombresColaborador}"/>
+                        <h:outputText value="#{bundle.ViewColaboradorLabel_primerApellido}"/>
+                        <h:outputText value="#{colaboradorController.selected.primerApellido}" title="#{bundle.ViewColaboradorTitle_primerApellido}"/>
+                        <h:outputText value="#{bundle.ViewColaboradorLabel_segundoApellido}"/>
+                        <h:outputText value="#{colaboradorController.selected.segundoApellido}" title="#{bundle.ViewColaboradorTitle_segundoApellido}"/>
+                        <h:outputText value="#{bundle.ViewColaboradorLabel_sexo}"/>
+                        <p:selectBooleanCheckbox value="#{colaboradorController.selected.sexo}" disabled="true"/>
+                        <h:outputText value="#{bundle.ViewColaboradorLabel_especialidad}"/>
+                        <h:outputText value="#{colaboradorController.selected.especialidad}" title="#{bundle.ViewColaboradorTitle_especialidad}"/>
+                        <h:outputText value="#{bundle.ViewColaboradorLabel_identificacion}"/>
+                        <h:outputText value="#{colaboradorController.selected.identificacion}" title="#{bundle.ViewColaboradorTitle_identificacion}"/>
+                        <h:outputText value="#{bundle.ViewColaboradorLabel_telefono}"/>
+                        <h:outputText value="#{colaboradorController.selected.telefono}" title="#{bundle.ViewColaboradorTitle_telefono}"/>
+                        <h:outputText value="#{bundle.ViewColaboradorLabel_direccion}"/>
+                        <h:outputText value="#{colaboradorController.selected.direccion}" title="#{bundle.ViewColaboradorTitle_direccion}"/>
+                        <h:outputText value="#{bundle.ViewColaboradorLabel_rol}"/>
+                        <h:outputText value="#{colaboradorController.selected.rol}" title="#{bundle.ViewColaboradorTitle_rol}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="ColaboradorViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

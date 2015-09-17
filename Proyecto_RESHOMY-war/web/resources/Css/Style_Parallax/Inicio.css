@@ -1,0 +1,143 @@
+
+@charset "utf-8";
+@font-face {
+    font-family: 'comfortaabold';
+    src: url("../../Fonts/Fonts_Principal/comfortaa-bold-webfont.eot");
+    src: url("../../Fonts/Fonts_Principal/comfortaa-bold-webfont.eot?#iefix") format('embedded-opentype'),
+         url("../../Fonts/Fonts_Principal/comfortaa-bold-webfont.woff2") format('woff2'),
+         url("../../Fonts/Fonts_Principal/comfortaa-bold-webfont.woff") format('woff'),
+         url("../../Fonts/Fonts_Principal/comfortaa-bold-webfont.ttf") format('truetype'),
+         url("../../Fonts/Fonts_Principal/comfortaa-bold-webfont.svg#comfortaabold") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;    
+    cursor: default;
+    font-family: 'comfortaabold';
+}
+body{
+    background: #0a0b1b;
+}
+/*Efect Parallax*/
+#container{
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    max-width: 2000px;
+    height: 800px;    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -khtml-background-size: cover;    
+    opacity: 0.8;
+}
+#ResHomy2{
+    margin-left: 80px;
+    margin-top: 80px;
+    opacity: 0.3;
+}
+#ResHomy1{
+    width: 100%;
+    opacity: 0.7;
+    max-width: 900px;
+}
+#ResHomy{
+    width: 100%;
+    opacity: 0.9;
+}
+#Entrar{
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    top: 3cm;
+    max-width: 340px;    
+    cursor: pointer;
+    outline: none;
+}
+#Entrar1{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    bottom: 5.5cm;
+    max-width: 400px;    
+    outline: none;
+}
+.modal-backdrop{
+    pointer-events: none;
+}
+/*Modal Advertencia*/
+.ModalContent{   
+    width: 100%;
+    border-radius: 50px;    
+    max-width: 400px;
+}
+.ModalHeader{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;    
+    background: #0537a8;
+}
+.ModalTitle{
+    color: #FFF;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+.Deshabilitado{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+.CloseModal{
+    border-radius: 20px;
+    padding: 15px;
+    outline: none;
+    background: #0c3ca9;
+    color: #FFF;
+    border: none !important;
+    opacity: 0.9;    
+    font-weight: bold;
+    transition: 0.3s;
+}
+.CloseModal:hover{
+    opacity: 1;
+    transform: scale(1.2);  
+}
+/*Title*/
+#Titulo{
+    position: absolute;
+    z-index: 6;
+    font-weight: bold;
+    font-size: 40px;
+    color: #FFFFFF;
+    text-shadow: 5px 5px 5px #000000;
+    top: 12cm;
+    text-align: center;
+    font-weight: bold;
+}
+#Titulos{
+    width: 350px;
+}
+/*Modal Bienvenida*/
+.ContentHeader{
+    border-radius: 40px !important;
+}
+.Header{
+    background-color: #0536a7;
+    border-radius: 24px;
+    border: #0536a7 solid 3px;
+}
+.HeaderTitle{
+    text-align: center !important;
+    color: #FFF !important;
+    text-shadow: 2px 2px 2px #000000;
+    font-size: 49px;
+    font-weight: bold;
+}

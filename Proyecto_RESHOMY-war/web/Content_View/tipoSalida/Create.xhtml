@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="TipoSalidaCreateDlg" widgetVar="TipoSalidaCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateTipoSalidaTitle}">
+            <h:form id="TipoSalidaCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{tipoSalidaController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateTipoSalidaLabel_idTipoSalida}" for="idTipoSalida" />
+                        <p:inputText id="idTipoSalida" value="#{tipoSalidaController.selected.idTipoSalida}" title="#{bundle.CreateTipoSalidaTitle_idTipoSalida}" required="true" requiredMessage="#{bundle.CreateTipoSalidaRequiredMessage_idTipoSalida}"/>
+                        <p:outputLabel value="#{bundle.CreateTipoSalidaLabel_destino}" for="destino" />
+                        <p:selectBooleanCheckbox id="destino" value="#{tipoSalidaController.selected.destino}" required="true" requiredMessage="#{bundle.EditTipoSalidaRequiredMessage_destino}"/>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{tipoSalidaController.create}" value="#{bundle.Save}" update="display,:TipoSalidaListForm:datalist,:growl" oncomplete="handleSubmit(args,'TipoSalidaCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="TipoSalidaCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

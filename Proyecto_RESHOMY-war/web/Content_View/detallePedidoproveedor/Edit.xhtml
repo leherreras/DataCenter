@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="DetallePedidoproveedorEditDlg" widgetVar="DetallePedidoproveedorEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditDetallePedidoproveedorTitle}">
+            <h:form id="DetallePedidoproveedorEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{detallePedidoproveedorController.selected != null}">
+                        <p:outputLabel value="#{bundle.EditDetallePedidoproveedorLabel_idDetallePedidoProveedor}" for="idDetallePedidoProveedor" />
+                        <p:inputText id="idDetallePedidoProveedor" value="#{detallePedidoproveedorController.selected.idDetallePedidoProveedor}" title="#{bundle.EditDetallePedidoproveedorTitle_idDetallePedidoProveedor}" required="true" requiredMessage="#{bundle.EditDetallePedidoproveedorRequiredMessage_idDetallePedidoProveedor}"/>
+                        <p:outputLabel value="#{bundle.EditDetallePedidoproveedorLabel_precioProductoUnidad}" for="precioProductoUnidad" />
+                        <p:inputText id="precioProductoUnidad" value="#{detallePedidoproveedorController.selected.precioProductoUnidad}" title="#{bundle.EditDetallePedidoproveedorTitle_precioProductoUnidad}" required="true" requiredMessage="#{bundle.EditDetallePedidoproveedorRequiredMessage_precioProductoUnidad}"/>
+                        <p:outputLabel value="#{bundle.EditDetallePedidoproveedorLabel_cantidad}" for="cantidad" />
+                        <p:inputText id="cantidad" value="#{detallePedidoproveedorController.selected.cantidad}" title="#{bundle.EditDetallePedidoproveedorTitle_cantidad}" required="true" requiredMessage="#{bundle.EditDetallePedidoproveedorRequiredMessage_cantidad}"/>
+                        <p:outputLabel value="#{bundle.EditDetallePedidoproveedorLabel_descuento}" for="descuento" />
+                        <p:inputText id="descuento" value="#{detallePedidoproveedorController.selected.descuento}" title="#{bundle.EditDetallePedidoproveedorTitle_descuento}" />
+                        <p:outputLabel value="#{bundle.EditDetallePedidoproveedorLabel_entregado}" for="entregado" />
+                        <p:selectBooleanCheckbox id="entregado" value="#{detallePedidoproveedorController.selected.entregado}" required="true" requiredMessage="#{bundle.EditDetallePedidoproveedorRequiredMessage_entregado}"/>
+                        <p:outputLabel value="#{bundle.EditDetallePedidoproveedorLabel_fechaPedidoProveedor}" for="fechaPedidoProveedor" />
+                        <p:calendar id="fechaPedidoProveedor" pattern="MM/dd/yyyy HH:mm:ss" value="#{detallePedidoproveedorController.selected.fechaPedidoProveedor}" title="#{bundle.EditDetallePedidoproveedorTitle_fechaPedidoProveedor}" required="true" requiredMessage="#{bundle.EditDetallePedidoproveedorRequiredMessage_fechaPedidoProveedor}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.EditDetallePedidoproveedorLabel_fechaEntregaProveedor}" for="fechaEntregaProveedor" />
+                        <p:calendar id="fechaEntregaProveedor" pattern="MM/dd/yyyy" value="#{detallePedidoproveedorController.selected.fechaEntregaProveedor}" title="#{bundle.EditDetallePedidoproveedorTitle_fechaEntregaProveedor}" required="true" requiredMessage="#{bundle.EditDetallePedidoproveedorRequiredMessage_fechaEntregaProveedor}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.EditDetallePedidoproveedorLabel_proveedor}" for="proveedor" />
+                        <p:selectOneMenu id="proveedor" value="#{detallePedidoproveedorController.selected.proveedor}" required="true" requiredMessage="#{bundle.EditDetallePedidoproveedorRequiredMessage_proveedor}">
+                            <f:selectItem itemLabel="#{bundle.SelectOneMessage}"/>
+                            <f:selectItems value="#{proveedorController.itemsAvailableSelectOne}"
+                                           var="proveedorItem"
+                                           itemValue="#{proveedorItem}"/>
+                        </p:selectOneMenu>
+                        <p:outputLabel value="#{bundle.EditDetallePedidoproveedorLabel_producto}" for="producto" />
+                        <p:selectOneMenu id="producto" value="#{detallePedidoproveedorController.selected.producto}" required="true" requiredMessage="#{bundle.EditDetallePedidoproveedorRequiredMessage_producto}">
+                            <f:selectItem itemLabel="#{bundle.SelectOneMessage}"/>
+                            <f:selectItems value="#{productoController.itemsAvailableSelectOne}"
+                                           var="productoItem"
+                                           itemValue="#{productoItem}"/>
+                        </p:selectOneMenu>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{detallePedidoproveedorController.update}" value="#{bundle.Save}" update="display,:DetallePedidoproveedorListForm:datalist,:growl" oncomplete="handleSubmit(args, 'DetallePedidoproveedorEditDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="DetallePedidoproveedorEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
